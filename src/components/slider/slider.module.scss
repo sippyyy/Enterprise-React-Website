@@ -1,0 +1,19 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.wrapper{
+    height: 100%;
+    @include display (flex,center,center);
+    flex-direction: column;
+    text-align: center;
+}
+
+.title{
+    @include textSlider;
+    text-align: center;
+}
+
+.desc{
+    @include sliderDesc;
+    text-align: center;
+}

@@ -1,0 +1,132 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+
+.navbar{
+    padding: 0 $space-90;
+    @include display(flex,space-between, center);
+    height: 68px;
+    position: fixed;
+    left:0;
+    right:0;
+    z-index: 1000;
+    @include transition;
+
+    @media (max-width: 750px) {
+        height: unset;
+        padding-left: $space-30;
+        padding-right: 0;
+    }
+
+
+
+    &__left{
+        height: 68px;
+        @include display(flex,center,center);
+        
+        @media (max-width: 750px) {
+            text-align: center;
+            height: unset;
+            margin-bottom: $space-30;
+        }
+    }
+    &__logo{
+        @include headerSize($weight-600);
+        height: 68px;
+        @include display(flex,center,center);
+    }
+
+    &__right{
+        @include display(flex,flex-end,center);
+        flex: 1;
+        height: 100%;
+
+        @media (max-width: 750px) {
+            position: fixed;
+            flex-direction: column;
+            height: unset;
+            right: -50%;
+            top:0;
+            bottom: 0;
+            width: 170px;
+            padding:0;
+            justify-content: flex-start;
+            background-color: $black;
+            padding: $space-30 0;
+            opacity: 0;
+            @include transition;
+        }
+    }
+
+    .button{
+        &__open{
+            position: absolute;
+            right: 14px;
+            top:14px;
+        }
+
+        &__icon{
+            font-size: 5rem;
+            color: $white;
+            position: absolute;
+            top:$space-8;
+            right: 0;
+            padding: $space-8
+        }
+    }
+
+
+    &__list{
+        @include display(flex,space-between,center);
+        height: 100%;
+
+        @media (max-width: 750px) {
+            display: block;
+            text-align: center;
+            height: unset;
+            text-align: center;
+            width: 100%;
+        }
+
+    }
+
+    &__item{
+        height: 100%;
+        @include display(flex,space-between,center);
+        font-size: 2rem;
+
+        &+.navbar__item{
+            margin-left: $space-90;
+        }
+
+        @media (max-width: 750px) {
+            &+.navbar__item{
+                margin-left: 0;
+            }
+            display: block;
+            text-align: center;
+            padding: $space-16;
+            height: unset;
+            font-size: 1.8rem;
+
+
+        }
+
+        a{
+            font-weight: $weight-400;
+        }
+    }
+}
+
+.black{
+    background-color: $black;
+}
+
+.hide{
+    display: none;
+}
+
+.active{
+    right:0;
+    opacity: 1;
+}

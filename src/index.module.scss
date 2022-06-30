@@ -1,0 +1,57 @@
+@import './sass/mixins';
+@import './sass/variables';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+    font-size: 62.5%;
+    font-family: 'Inter', sans-serif;
+    margin: auto;
+}
+
+body{
+    color: $white;
+    font-size: $text-size;
+    font-weight: $weight-300;
+    background-color: $black;
+    max-width: 1512px;
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+    color: unset;
+    &:hover{
+        color: unset;
+    }
+}
+
+ul{
+    padding:0;
+    list-style-type: none;
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5{
+    margin-bottom: 0;
+}
+
+button{
+    border: none;
+    background-color: unset;
+    @include contentDefault($weight-500);
+}
+
+p{
+    margin:0;
+}
+
+
+
+

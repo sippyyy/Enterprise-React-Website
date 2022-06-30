@@ -1,0 +1,58 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.wrapper{
+    margin: $space-90 0;
+
+}
+
+.team{
+    margin-top: $space-30;
+
+}
+.block{
+    position: relative;
+    overflow: hidden;
+
+    &:hover .detail{
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+.img{
+    width: 100%;
+}
+.detail{
+    padding: $space-16;
+    background-color: $white;
+    position: absolute;
+    width: 100%;
+    color: $black;
+    bottom:-20%;
+    opacity:0;
+    @include transition;
+
+    @media(max-width: 579px){
+        width: 70%;
+        left:0;
+        bottom:0;
+        opacity: 1;
+    }
+}
+
+.right{
+    @media(max-width: 579px){
+        right:0;
+        left: unset;
+    }
+}
+
+.title{
+    @include sliderDesc;
+    margin-top: $space-8;
+}
+
+.desc{
+    @include contentDefault($weight-600);
+}

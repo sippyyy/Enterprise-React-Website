@@ -1,0 +1,19 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.row__center{
+    @include display(flex,center,unset)
+}
+
+.title{
+    @include titleSize;
+
+    &__block{
+        margin: $space-60 0;
+        text-align: center;
+    }
+
+    &__desc{
+        @include titleDescSize;
+    }
+}

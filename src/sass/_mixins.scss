@@ -1,0 +1,175 @@
+@import './variables';
+
+@mixin contentDefault ($weight: $weight-300) {
+    font-weight: $weight;
+    font-size: 2rem;
+
+    @media (max-width: 992px){
+        font-size: 2rem;
+    }
+
+    @media (max-width: 768px){
+        font-size: 1.8rem;
+    }
+
+    @media (min-width: 576px){
+        font-size: 1.5rem;
+    }
+    @media (max-width: 576px){
+        font-size: 1.3rem;
+    }
+}
+
+@mixin headerSize($weight:$weight-300) {
+    font-size: 2.4rem;
+}
+
+
+@mixin textSlider {
+    font-weight: $weight-600;
+    font-size: 132.96px;
+    line-height: 0.8;
+
+    @media (max-width: 992px){
+    line-height: 0.8;
+    font-size: 10rem;
+    }
+
+    @media (max-width: 768px){
+        font-size: 8rem;
+    }
+
+    @media (max-width: 576px){
+        font-size: 5rem;
+        line-height: 1;
+    }
+
+    
+}
+
+@mixin sliderDesc {
+    font-size: 3.2rem;
+    margin-top: $space-60;
+
+    @media (max-width: 992px){
+        font-size: 3rem;
+    }
+
+    @media (max-width: 768px){
+        font-size: 2.3rem;
+        margin-top: $space-30;
+        
+    }
+
+    @media (max-width: 576px){
+        font-size: 1.8rem;
+        margin-top: $space-16;
+
+    }
+
+}
+
+@mixin serviceTitle{
+    font-size: 3.6rem;
+    font-weight:$weight-600;
+    margin-bottom: $space-16;
+
+    @media (max-width: 992px){
+        font-size: 2.8rem;
+    }
+
+    @media (max-width: 768px){
+        font-size: 2.3rem;
+    }
+
+    @media (max-width: 576px){
+        font-size: 1.8rem;
+    }
+}
+
+
+@mixin display($type: flex,$justify: unset, $align: unset) {
+    display: $type;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin titleSize ($weight: $weight-600) {
+    font-size: 8rem;
+    font-weight: $weight;
+
+    
+    @media (max-width: 992px){
+        font-size: 8rem;
+    }
+
+    @media (max-width: 768px){
+        font-size: 7rem;
+    }
+    @media (max-width: 576px){
+        font-size: 5rem;
+    }
+}
+
+@mixin detailSize($size: 4.5rem, $weight:$weight-700,){
+    font-size: $size;
+    font-weight: $weight;
+
+    @media (max-width: 960px){
+        font-size: 3rem;
+    }
+    
+    @media(max-width: 579px){
+        font-size: 2rem;
+    }
+}
+
+@mixin titleDescSize ($size:$size-descript) {
+    font-size: $size;
+    margin-top: $space-16;
+    weight: $weight-600;
+    
+    @media (max-width: 992px){
+        font-size: $size-descript;
+    }
+
+    @media (max-width: 768px){
+        font-size: 2rem;
+    }
+
+    @media (min-width: 576px){
+        font-size: 2rem;
+    }
+    @media (max-width: 576px){
+        font-size: 1.8rem;
+    }
+}
+
+@mixin transition ($delay: 0s){
+    transition: all linear 0.4s $delay;
+}
+
+@mixin sizeContact {
+    font-size: 5rem;
+
+    @media (max-width: 960px){
+        font-size: 4rem;
+    }
+
+    @media(max-width: 579px){
+        font-size: $size-descript;
+    }
+
+    
+
+}
+
+@mixin sizeLink{
+    font-size: 3rem;
+
+    @media (max-width: 960px){
+        font-size: $size-descript;
+    }
+}
+
+

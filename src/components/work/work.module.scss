@@ -1,0 +1,113 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.wrapper{
+    margin: $space-90 0;
+}
+
+.container{
+    margin-top: $space-30;
+}
+
+
+
+.block{
+    position: relative;
+    overflow: hidden;
+
+    &:hover .block__detail{
+        bottom: 0;
+        opacity: 1;
+    }
+
+    &__img{
+        width: 100%;
+    }
+    &__detail{
+        background-color: $white;
+        color: $black;
+        padding: $space-16 $space-30;
+        position: absolute;
+        bottom: -100%;
+        opacity: 0;
+        left:0;
+        text-align: left;
+        @include transition;
+        
+        @media(max-width: 579px){
+            bottom: 0;
+            opacity: 1;
+            width: 70%;
+            padding: $space-8 $space-16;
+
+
+        }
+    }
+
+    &__title{
+        @include detailSize;
+        margin-bottom: $space-8;
+        @media(max-width: 579px){
+            margin: 0;
+        }
+    }
+
+    &__desc{
+        margin-bottom: $space-8;
+        @include contentDefault($weight-400);
+        @media(max-width: 579px){
+            margin-top: $space-8;
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+    }
+
+    &__btn{
+        @media(max-width: 579px){
+            display: none;
+        }
+    }
+
+    &__icon{
+        font-size: 4rem;
+    }
+
+}
+
+.mobile{
+    width: 100%;
+    padding: $space-16;
+    @include display(flex,center,center);
+}
+
+.buttonBar{
+    width: 30%;
+    height: 5px;
+    background-color: $white;
+    border-radius: 999px;
+}
+
+.right{
+    @media(max-width: 579px){
+        right:0;
+        left:unset;
+    }
+}
+
+.extra__btn{
+    text-align: center;
+}
+
+.button{
+    margin-top: $space-30;
+    padding: $space-8 $space-30;
+    border: 2px solid $white;
+    display: inline-block;
+    @include contentDefault($weight-600);
+    cursor: pointer;
+}
+
+.hide{
+    display: none;
+}
+

@@ -1,0 +1,58 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+.wrapper{
+     margin: $space-90 0;
+}
+
+.row{
+     justify-content: center;
+}
+
+.cover{
+    margin-top: $space-30;
+}
+
+.container{
+     background-color: $white;
+}
+
+.content{
+     padding: $space-60 $space-30;
+     color: $black;
+
+     @media(max-width: 579px){
+          padding: $space-30 $space-16;
+      }
+     
+}
+
+
+.title{
+     @include serviceTitle;
+}
+
+.desc{
+     @include contentDefault($weight-400);
+     margin-bottom: $space-16;
+}
+
+.btn{
+     @media(max-width: 579px){
+          font-size: 1.3rem;
+      }
+      &__icon{
+          height: 4rem;
+          width: 4rem;
+      }
+}
+.tag{
+     width: 100%;
+     background-color: $primary;
+     padding: $space-8 $space-8;
+     @include contentDefault($weight-600);
+
+     @media(max-width: 579px){
+          font-size: 1.3rem;
+          margin:0;
+      }
+}

@@ -1,0 +1,23 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.wrapper{
+    margin: $space-90 0;
+}
+
+.row__center{
+    @include display(flex,center,center);
+    text-align: center;
+    margin-bottom: $space-60;
+}
+
+.contact{
+    @include sizeContact;
+
+}
+
+.link{
+    width: 100%;
+    display: inline-block;
+    color: #C6C6C6;
+}
